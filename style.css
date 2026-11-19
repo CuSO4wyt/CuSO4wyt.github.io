@@ -1,8 +1,7 @@
-@font-face{font-family:'Computer Modern Sans';src:url('assets/fonts/cmunss.woff') format('woff'),url('https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@master/font/Sans/cmunss.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Computer Modern Sans';src:url('assets/fonts/cmunsx.woff') format('woff'),url('https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@master/font/Sans/cmunsx.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Computer Modern Sans';src:url('assets/fonts/cmunsi.woff') format('woff'),url('https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@master/font/Sans/cmunsi.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:'Computer Modern Sans';src:url('assets/fonts/cmunso.woff') format('woff'),url('https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@master/font/Sans/cmunso.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
-:root{--name:'Kaiti SC','STKaiti','KaiTi',serif;--paper:#faf9f6;--ink:#292e2b;--muted:#59615a;--green:#365f4e;--line:#dedfd6;--sans:'Computer Modern Sans','Helvetica Neue',Helvetica,Arial,'PingFang SC','Microsoft YaHei',sans-serif}
+@font-face{font-family:'Source Sans 3';src:url('assets/fonts/source-sans-3-latin.woff2') format('woff2'),url('https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZejf5Hc.woff2') format('woff2');font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Source Sans 3';src:url('assets/fonts/source-sans-3-italic-latin.woff2') format('woff2'),url('https://fonts.gstatic.com/s/sourcesans3/v20/nwpMtKy2OAdR1K-IwhWudF-R3woqZ-LYxnV18A.woff2') format('woff2');font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Source Serif 4';src:url('assets/fonts/source-serif-4-latin.woff2') format('woff2'),url('https://fonts.gstatic.com/s/sourceserif4/v15/vEFI2_tTDB4M7-auWDN0ahZJW1gb8te1Xb7G.woff2') format('woff2');font-weight:200 900;font-style:normal;font-display:swap}
+:root{--name:'Kaiti SC','STKaiti','KaiTi',serif;--paper:#faf9f6;--ink:#292e2b;--muted:#59615a;--green:#365f4e;--line:#dedfd6;--sans:'Source Sans 3','Helvetica Neue',Helvetica,Arial,'PingFang SC','Microsoft YaHei',sans-serif;--serif:'Source Serif 4',Georgia,'Times New Roman',serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--ink);background:var(--paper);font:21px/1.65 var(--sans);font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
@@ -31,7 +30,7 @@ strong{font-weight:600}
 .nav-links a span{margin-left:3px}
 .intro{display:grid;grid-template-columns:minmax(0,1fr) 236px;gap:88px;padding:62px 0 62px;align-items:center}
 .eyebrow{font-size:16px;font-weight:500;line-height:1.6;letter-spacing:.3px;text-transform:none;color:var(--muted)}
-h1{font:400 64px/1.16 var(--sans);letter-spacing:-1px;margin:0 0 8px}
+h1{font:400 64px/1.16 var(--serif);letter-spacing:-1px;margin:0 0 8px}
 .chinese-name{display:inline-block;font:400 31px/1.5 var(--name);letter-spacing:3px;color:var(--muted);margin-left:10px;white-space:nowrap;vertical-align:middle}
 .name-note{color:var(--muted);font-size:20px;margin-bottom:27px}
 .intro-lead{font:400 26px/1.55 var(--sans);letter-spacing:0;max-width:650px;margin-bottom:20px}
@@ -58,7 +57,7 @@ h1{font:400 64px/1.16 var(--sans);letter-spacing:-1px;margin:0 0 8px}
 .news-highlight strong{color:var(--green)}
 .inline-emoji{display:inline-block;white-space:nowrap;font-size:.95em;letter-spacing:0;margin-left:.15em}
 .section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
-h2{font:400 36px/1.25 var(--sans);letter-spacing:0}
+h2{font:400 36px/1.25 var(--serif);letter-spacing:0}
 .research .section-heading{margin-bottom:30px}
 .project{display:grid;grid-template-columns:340px minmax(0,1fr);gap:34px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start;scroll-margin-top:20px;transition:background-color .3s}
 .project:target{background-color:#eef0e7;box-shadow:16px 0 #eef0e7,-16px 0 #eef0e7}
@@ -106,7 +105,7 @@ details[open]>summary>span{transform:rotate(45deg)}
 .other-projects>article:only-child{grid-column:1 / -1;max-width:760px}
 .code-projects{border-top:1px solid var(--line);padding-top:32px;margin-top:28px}
 .code-projects-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:25px}
-.code-projects-heading h3{font:400 30px/1.4 var(--sans);letter-spacing:0}
+.code-projects-heading h3{font:400 30px/1.4 var(--serif);letter-spacing:0}
 .code-project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px}
 .code-project-feature{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:34px;align-items:center;padding-bottom:4px}
 .code-project-entry{display:flex;flex-direction:column;min-width:0;border-top:1px solid var(--line);padding-top:24px}
@@ -132,7 +131,7 @@ details[open]>summary>span{transform:rotate(45deg)}
 .text-link span{margin-left:7px}
 .text-link:hover{text-decoration:underline}
 .background-group+.background-group{border-top:1px solid var(--line);margin-top:30px;padding-top:30px}
-.column-title{font:400 25px/1.4 var(--sans);margin-bottom:24px}
+.column-title{font:400 25px/1.4 var(--serif);margin-bottom:24px}
 .timeline-item{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;margin-bottom:23px}
 .timeline-item:last-child{margin-bottom:0}
 .timeline-copy{max-width:780px}
@@ -155,7 +154,7 @@ details[open]>summary>span{transform:rotate(45deg)}
 .awards dt span{color:var(--muted);font-size:18px;margin-left:7px}
 .awards dd{white-space:nowrap;font-size:18px;color:var(--muted);margin:0;font-variant-numeric:tabular-nums}
 .site-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:28px 0 36px}
-.footer-name{font:22px/1.5 var(--sans);text-decoration:none;color:var(--ink)}
+.footer-name{font:22px/1.5 var(--serif);text-decoration:none;color:var(--ink)}
 .footer-name span{font:22px var(--name);color:var(--muted);margin-left:8px}
 .site-footer p{font-size:17px;color:var(--muted);margin-top:5px;letter-spacing:0}
 
