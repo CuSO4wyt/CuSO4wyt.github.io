@@ -101,7 +101,9 @@ details[open]>summary>span{transform:rotate(45deg)}
 .other-projects .small-note{margin-top:10px}
 .project-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:14px}
 .project-links a{font-size:19px;text-decoration:none;border-bottom:1px solid #b7c3b5}
+.project-links .paper-download{margin-top:0;padding:0}
 .project-links span{margin-left:5px}
+.other-projects>article:only-child{grid-column:1 / -1;max-width:760px}
 .code-projects{border-top:1px solid var(--line);padding-top:32px;margin-top:28px}
 .code-projects-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:25px}
 .code-projects-heading h3{font:400 30px/1.4 var(--sans);letter-spacing:0}

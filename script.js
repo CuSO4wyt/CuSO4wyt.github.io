@@ -36,7 +36,7 @@ if (viewer && typeof viewer.showModal === 'function') {
   const paperLinks = document.querySelector('#viewer-paper-links');
   const readPaper = document.querySelector('#viewer-paper');
   const downloadPaper = document.querySelector('#viewer-download');
-  const projectNames = { flowguard: 'FlowGuard', tracelens: 'TraceLens', proactiveflow: 'ProactiveFlow' };
+  const projectNames = { flowguard: 'FlowGuard', tracelens: 'TraceLens', proactiveflow: 'ProactiveFlow', 'ept-net': 'EPT-Net' };
   const researchGallery = [...document.querySelectorAll('.project-teaser')].map(link => {
     const project = link.closest('.project');
     const paper = project.querySelector('.paper-download');
