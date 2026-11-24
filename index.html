@@ -3,42 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf9f6">
+  <meta name="theme-color" content="#fcfcfa">
   <meta name="description" content="Yutong Wu is an undergraduate HCI researcher at Nanjing University, studying how people understand, evaluate, and oversee the work of AI agents.">
   <title>Yutong Wu · Human–AI Interaction</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=source-fonts-20261119">
+  <link rel="stylesheet" href="style.css?v=barron-20261124">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="nav wrap" aria-label="Main navigation">
+    <nav class="nav page" aria-label="Main navigation">
       <div class="nav-links">
-        <a href="#news">News</a><a href="#research">Research</a><a href="#background">Background</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#background">Background</a>
         <a href="assets/Yutong-Wu-CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a>
       </div>
     </nav>
   </header>
-  <main id="main" class="wrap">
-    <section id="home" class="intro" aria-labelledby="name">
-      <div class="intro-copy">
-        <h1 id="name">Yutong Wu <span class="chinese-name" lang="zh-CN">吴与同</span></h1>
+  <main id="main" class="page">
+    <section id="home" class="bio" aria-labelledby="name">
+      <div class="bio-text">
+        <h1 class="name" id="name">Yutong Wu <span class="chinese-name" lang="zh-CN">吴与同</span></h1>
         <p class="name-note">Fun fact: I also go by Yovela, which means “joy” in Hebrew.</p>
         <p class="intro-lead">I study how people <em>understand, evaluate, and oversee</em> the work of AI agents.</p>
         <p>I’m a final-year Computer Science undergraduate at Nanjing University and a research assistant in <strong>iMate Lab</strong>, advised by <strong><a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Prof. Ke Xu</a></strong>.</p>
         <p>I design interfaces to help people <a class="research-thread" href="#flowguard">notice and judge the decisions agents make</a>, especially when those decisions fall outside their expertise. I’m also interested in how people develop judgment and <a class="research-thread" href="#proactiveflow">shape their own ideas while building with AI</a>.</p>
-        <div class="contact-links" aria-label="Contact and profiles">
+        <div class="bio-links" aria-label="Contact and profiles">
           <a href="mailto:yutong-wu@smail.nju.edu.cn">Email <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/CuSO4wyt" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           <a href="assets/Yutong-Wu-CV.pdf" target="_blank" rel="noopener">Curriculum vitae <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <figure class="portrait">
-        <div class="portrait-frame"><img src="assets/portrait-yutong.png" width="1261" height="1163" alt="Portrait of Yutong Wu" fetchpriority="high"></div>
-        <span class="portrait-flower" aria-hidden="true">✳</span>
+      <figure class="bio-photo">
+        <img src="assets/portrait-yutong.png" width="1261" height="1163" alt="Portrait of Yutong Wu" fetchpriority="high">
       </figure>
     </section>
 
@@ -53,55 +55,57 @@
     </section>
 
     <section id="research" class="research section" aria-labelledby="research-title">
-      <div class="section-heading"><h2 id="research-title">Research</h2></div>
-      <article class="project" id="flowguard">
-        <a class="project-teaser" href="assets/teasers/flowguard.png" target="_blank" rel="noopener" aria-label="View the FlowGuard teaser at full size">
-          <img src="assets/teasers/flowguard.png" width="1804" height="820" loading="lazy" alt="FlowGuard teaser: an agent workflow with hidden methodological decisions, and an oversight interface that helps users judge them.">
-        </a>
-        <div class="project-copy">
-          <h3><a href="paper/chi27a-sub8864-i13.pdf" target="_blank" rel="noopener">What Did the Agent Decide? Supporting Oversight of Methodological Decisions in Agent-Constructed Machine Learning Workflows</a></h3>
-          <p class="authors"><strong>Yutong Wu</strong>, Yu Zhang, Qingwen Liu, Yixuan Tang, and <a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Ke Xu</a></p>
-          <p class="paper-status">Under review at ACM CHI 2027.</p>
-          <p>FlowGuard is a VS Code extension that surfaces methodological decisions in agent-built machine learning workflows, gives users evidence to judge them, and tracks their choices as the workflow changes.</p>
-          <a class="paper-download" href="paper/chi27a-sub8864-i13.pdf" download="Wu-et-al-FlowGuard.pdf" aria-label="Download the FlowGuard paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a>
-        </div>
-      </article>
-      <article class="project" id="tracelens">
-        <a class="project-teaser" href="assets/teasers/tracelens.png" target="_blank" rel="noopener" aria-label="View the TraceLens teaser at full size">
-          <img src="assets/teasers/tracelens.png" width="1804" height="966" loading="lazy" alt="TraceLens teaser showing the conversation, concept map, source data, and revision tools used to investigate LLM outputs.">
-        </a>
-        <div class="project-copy">
-          <h3><a href="paper/chi27a-sub9866-i13.pdf" target="_blank" rel="noopener">TraceLens: A Concept-Driven System for Efficient LLM Output Attribution and Data Debugging</a></h3>
-          <p class="authors">Junye Wang*, Zhuochen Jin*, <strong>Yutong Wu</strong>, Jiaju Jiang, Fang Zhao, and <a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Ke Xu</a> <span class="equal-note">(* equal contribution)</span></p>
-          <p class="paper-status">Under review at ACM CHI 2027.</p>
-          <p>TraceLens helps users trace erroneous LLM outputs to training data. It organizes retrieved examples into concepts so users can find patterns and debug the data.</p>
-          <a class="paper-download" href="paper/chi27a-sub9866-i13.pdf" download="Wang-et-al-TraceLens.pdf" aria-label="Download the TraceLens paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a>
-        </div>
-      </article>
-      <article class="project" id="proactiveflow">
-        <a class="project-teaser" href="assets/teasers/proactiveflow.png" target="_blank" rel="noopener" aria-label="View the ProactiveFlow teaser at full size">
-          <img src="assets/teasers/proactiveflow.png" width="1804" height="958" loading="lazy" alt="ProactiveFlow teaser showing how drawing activity and canvas context inform different kinds of creative support, including staying silent.">
-        </a>
-        <div class="project-copy">
-          <h3><a href="paper/chi27a-sub2023-i13.pdf" target="_blank" rel="noopener">ProactiveFlow: Coordinating Proactive AI Support for Sketch-Based Ideation</a></h3>
-          <p class="authors">Yuewen Gao, Wenchao Li, Yiqing Yang, Lejia Li, <strong>Yutong Wu</strong>, and <a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Ke Xu</a></p>
-          <p class="paper-status">Under review at ACM CHI 2027.</p>
-          <p>ProactiveFlow uses drawing activity and canvas context to coordinate when to offer help and what to suggest during sketching. It also considers when to stay silent.</p>
-          <a class="paper-download" href="paper/chi27a-sub2023-i13.pdf" download="Gao-et-al-ProactiveFlow.pdf" aria-label="Download the ProactiveFlow paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a>
-        </div>
-      </article>
-      <article class="project" id="ept-net">
-        <a class="project-teaser" href="assets/teasers/ept-net.png" target="_blank" rel="noopener" aria-label="View the EPT-Net teaser at full size">
-          <img src="assets/teasers/ept-net.png" width="1889" height="1866" loading="lazy" alt="EPT-Net compares fixed temporal windows with event-conditioned selection of EEG and pulse-rate history during a multimodal interaction.">
-        </a>
-        <div class="project-copy">
-          <h3><a href="paper/Wang-Wu-et-al-EPT-Net.pdf" target="_blank" rel="noopener">EPT-Net: Event-Conditioned Reading of Physiological History for Multimodal Event Recognition</a></h3>
-          <p class="authors">Yiwen Wang*, <strong>Yutong Wu*</strong>, and <a class="person-link" href="https://software.nju.edu.cn/fenggh/" target="_blank" rel="noopener noreferrer">Guihuan Feng</a> <span class="equal-note">(* equal contribution)</span></p>
-          <p class="paper-status">Early research work · Accepted at <a href="https://www.aihcir.org/" target="_blank" rel="noopener noreferrer">AIHCIR 2026</a>.</p>
-          <p>EPT-Net uses behavioral context to select where and over what span to read EEG and PPG history for event recognition. We evaluate it on synchronized multimodal recordings from 45 participants.</p>
-          <div class="project-links"><a class="paper-download" href="paper/Wang-Wu-et-al-EPT-Net.pdf" download="Wang-Wu-et-al-EPT-Net.pdf" aria-label="Download the EPT-Net paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a><a href="https://github.com/w2yiwen/EPT2026" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div>
-        </div>
-      </article>
+      <div class="section-header"><h2 id="research-title">Research</h2></div>
+      <div class="papers">
+        <article class="paper" id="flowguard">
+          <a class="paper-media" href="assets/teasers/flowguard.png" target="_blank" rel="noopener" aria-label="View the FlowGuard teaser at full size">
+            <img src="assets/teasers/flowguard.png" width="1804" height="820" loading="lazy" alt="FlowGuard teaser: an agent workflow with hidden methodological decisions, and an oversight interface that helps users judge them.">
+          </a>
+          <div class="paper-info">
+            <h3><a href="paper/chi27a-sub8864-i13.pdf" target="_blank" rel="noopener">What Did the Agent Decide? Supporting Oversight of Methodological Decisions in Agent-Constructed Machine Learning Workflows</a></h3>
+            <p class="authors"><strong>Yutong Wu</strong>, Yu Zhang, Qingwen Liu, Yixuan Tang, and <a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Ke Xu</a></p>
+            <p class="paper-status">Under review at ACM CHI 2027.</p>
+            <p>FlowGuard is a VS Code extension that surfaces methodological decisions in agent-built machine learning workflows, gives users evidence to judge them, and tracks their choices as the workflow changes.</p>
+            <a class="paper-download" href="paper/chi27a-sub8864-i13.pdf" download="Wu-et-al-FlowGuard.pdf" aria-label="Download the FlowGuard paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <article class="paper" id="tracelens">
+          <a class="paper-media" href="assets/teasers/tracelens.png" target="_blank" rel="noopener" aria-label="View the TraceLens teaser at full size">
+            <img src="assets/teasers/tracelens.png" width="1804" height="966" loading="lazy" alt="TraceLens teaser showing the conversation, concept map, source data, and revision tools used to investigate LLM outputs.">
+          </a>
+          <div class="paper-info">
+            <h3><a href="paper/chi27a-sub9866-i13.pdf" target="_blank" rel="noopener">TraceLens: A Concept-Driven System for Efficient LLM Output Attribution and Data Debugging</a></h3>
+            <p class="authors">Junye Wang*, Zhuochen Jin*, <strong>Yutong Wu</strong>, Jiaju Jiang, Fang Zhao, and <a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Ke Xu</a> <span class="equal-note">(* equal contribution)</span></p>
+            <p class="paper-status">Under review at ACM CHI 2027.</p>
+            <p>TraceLens helps users trace erroneous LLM outputs to training data. It organizes retrieved examples into concepts so users can find patterns and debug the data.</p>
+            <a class="paper-download" href="paper/chi27a-sub9866-i13.pdf" download="Wang-et-al-TraceLens.pdf" aria-label="Download the TraceLens paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <article class="paper" id="proactiveflow">
+          <a class="paper-media" href="assets/teasers/proactiveflow.png" target="_blank" rel="noopener" aria-label="View the ProactiveFlow teaser at full size">
+            <img src="assets/teasers/proactiveflow.png" width="1804" height="958" loading="lazy" alt="ProactiveFlow teaser showing how drawing activity and canvas context inform different kinds of creative support, including staying silent.">
+          </a>
+          <div class="paper-info">
+            <h3><a href="paper/chi27a-sub2023-i13.pdf" target="_blank" rel="noopener">ProactiveFlow: Coordinating Proactive AI Support for Sketch-Based Ideation</a></h3>
+            <p class="authors">Yuewen Gao, Wenchao Li, Yiqing Yang, Lejia Li, <strong>Yutong Wu</strong>, and <a class="person-link" href="https://lukexuke.github.io/" target="_blank" rel="noopener noreferrer">Ke Xu</a></p>
+            <p class="paper-status">Under review at ACM CHI 2027.</p>
+            <p>ProactiveFlow uses drawing activity and canvas context to coordinate when to offer help and what to suggest during sketching. It also considers when to stay silent.</p>
+            <a class="paper-download" href="paper/chi27a-sub2023-i13.pdf" download="Gao-et-al-ProactiveFlow.pdf" aria-label="Download the ProactiveFlow paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <article class="paper" id="ept-net">
+          <a class="paper-media" href="assets/teasers/ept-net.png" target="_blank" rel="noopener" aria-label="View the EPT-Net teaser at full size">
+            <img src="assets/teasers/ept-net.png" width="1889" height="1866" loading="lazy" alt="EPT-Net compares fixed temporal windows with event-conditioned selection of EEG and pulse-rate history during a multimodal interaction.">
+          </a>
+          <div class="paper-info">
+            <h3><a href="paper/Wang-Wu-et-al-EPT-Net.pdf" target="_blank" rel="noopener">EPT-Net: Event-Conditioned Reading of Physiological History for Multimodal Event Recognition</a></h3>
+            <p class="authors">Yiwen Wang*, <strong>Yutong Wu*</strong>, and <a class="person-link" href="https://software.nju.edu.cn/fenggh/" target="_blank" rel="noopener noreferrer">Guihuan Feng</a> <span class="equal-note">(* equal contribution)</span></p>
+            <p class="paper-status">Early research work · Accepted at <a href="https://www.aihcir.org/" target="_blank" rel="noopener noreferrer">AIHCIR 2026</a>.</p>
+            <p>EPT-Net uses behavioral context to select where and over what span to read EEG and PPG history for event recognition. We evaluate it on synchronized multimodal recordings from 45 participants.</p>
+            <div class="project-links"><a class="paper-download" href="paper/Wang-Wu-et-al-EPT-Net.pdf" download="Wang-Wu-et-al-EPT-Net.pdf" aria-label="Download the EPT-Net paper as a PDF">Download PDF <span aria-hidden="true">↓</span></a><a href="https://github.com/w2yiwen/EPT2026" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+      </div>
       <article class="patent-record" id="patent" aria-labelledby="patent-title">
         <p class="patent-label">Patent <span>2025</span></p>
         <div>
@@ -115,45 +119,46 @@
       <details class="more-research"><summary>Other work <span aria-hidden="true">+</span></summary><div class="other-projects">
         <article><h3>AI personas and relational risks</h3><p>I study how training and interaction context shape assistant behavior, and designed a cross-model analysis protocol for emotional-support scenarios across GPT, Claude, and DeepSeek.</p><p class="small-note">2026–present · Nanjing University Future Creators Program · Supervised by <a class="person-link" href="https://artinno.nju.edu.cn/teams/5cfcd9090ed67bb4be/" target="_blank" rel="noopener noreferrer">Prof. Yuan Mengqian</a></p></article>
       </div></details>
-      <div class="code-projects" id="projects" aria-labelledby="projects-title">
-        <div class="code-projects-heading"><h3 id="projects-title">Projects</h3><a class="text-link" href="https://github.com/CuSO4wyt?tab=repositories" target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span></a></div>
-        <div class="code-project-list">
-          <article class="code-project code-project-feature" id="geometry-sketchpad">
-            <a class="project-preview" data-gallery="projects" data-title="Geometry sketchpad" href="assets/projects/geometry-sketchpad.png" target="_blank" rel="noopener" aria-label="View the geometry sketchpad interface at full size"><img src="assets/projects/geometry-sketchpad.png" width="1366" height="908" loading="lazy" alt="Geometry sketchpad interface with drawing tools, a grid canvas, editable curve control points, and a layer panel."></a>
-            <div class="code-project-copy">
-              <h4><a href="https://github.com/CuSO4wyt/NJU_Computer_Graphic" target="_blank" rel="noopener noreferrer">Geometry sketchpad <span class="inline-emoji" aria-hidden="true">📐</span><span class="repo-arrow" aria-hidden="true">↗</span></a></h4>
-              <p>A Python/PyQt sketchpad for geometric drawing and transformations. Edit shapes on the canvas or through the command panel.</p>
-              <div class="project-links"><a href="https://github.com/CuSO4wyt/NJU_Computer_Graphic" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://github.com/CuSO4wyt/NJU_Computer_Graphic/blob/main/231220066_%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf" target="_blank" rel="noopener noreferrer">User guide <span aria-hidden="true">↗</span></a></div>
-              <p class="code-project-context">Python · PyQt5 · Computer Graphics course project</p>
-            </div>
-          </article>
-          <article class="code-project code-project-entry" id="ics-pa">
-            <h4><a href="https://github.com/CuSO4wyt/NJU_ICS_PA2024" target="_blank" rel="noopener noreferrer">IA-32 emulator &amp; kernel <span class="repo-arrow" aria-hidden="true">↗</span></a></h4>
-            <p>An IA-32 emulation project built on NJU’s NEMU framework. It connects instruction execution with paging/TLBs, interrupts, ELF loading, and kernel system calls.</p>
-            <p class="code-project-context">C · Computer Systems course project</p>
-          </article>
-          <article class="code-project code-project-entry" id="network-labs">
-            <h4><a href="https://github.com/CuSO4wyt/NJU_Network_2025_Spring" target="_blank" rel="noopener noreferrer">TCP/IP networking <span class="repo-arrow" aria-hidden="true">↗</span></a></h4>
-            <p>C networking labs covering TCP retransmission and congestion control, IP forwarding, and link-state routing, with Mininet topologies for experimenting with packet loss.</p>
-            <p class="code-project-context">C · Mininet · Computer Networks, 2025</p>
-          </article>
-          <article class="code-project code-project-entry" id="riscv-cpu">
-            <h4><a href="https://github.com/CuSO4wyt/NJU-DLCO-2024Spring-lab-logisim" target="_blank" rel="noopener noreferrer">32-bit RISC-V CPU <span class="repo-arrow" aria-hidden="true">↗</span></a></h4>
-            <p>A CPU core built in Logisim, alongside my digital logic and computer organization labs.</p>
-            <p class="code-project-context">2024 · Digital Logic &amp; Computer Organization</p>
-          </article>
-          <article class="code-project code-project-entry" id="tower-defence">
-            <h4><a href="https://github.com/CuSO4wyt/Tower_Defense_Game" target="_blank" rel="noopener noreferrer">Tower defence <span class="inline-emoji" aria-hidden="true">🎮</span><span class="repo-arrow" aria-hidden="true">↗</span></a></h4>
-            <p>A Qt/C++ game with melee and ranged towers, three difficulty levels, and maps you can save and load.</p>
-            <div class="game-footnote"><div class="game-characters" aria-hidden="true"><img src="assets/projects/sheep.png" width="100" height="100" loading="lazy" alt=""><img src="assets/projects/dog-tower.png" width="100" height="100" loading="lazy" alt=""></div><p>The sheep enemies and dog towers were drawn by a friend.</p></div>
-            <p class="code-project-context">2024 · Advanced Programming course project</p>
-          </article>
-        </div>
+    </section>
+
+    <section class="section code-projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-header"><h2 id="projects-title">Projects</h2><a class="text-link" href="https://github.com/CuSO4wyt?tab=repositories" target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span></a></div>
+      <div class="code-project-list">
+        <article class="code-project code-project-feature" id="geometry-sketchpad">
+          <a class="project-preview" data-gallery="projects" data-title="Geometry sketchpad" href="assets/projects/geometry-sketchpad.png" target="_blank" rel="noopener" aria-label="View the geometry sketchpad interface at full size"><img src="assets/projects/geometry-sketchpad.png" width="1366" height="908" loading="lazy" alt="Geometry sketchpad interface with drawing tools, a grid canvas, editable curve control points, and a layer panel."></a>
+          <div class="code-project-copy">
+            <h3><a href="https://github.com/CuSO4wyt/NJU_Computer_Graphic" target="_blank" rel="noopener noreferrer">Geometry sketchpad <span class="inline-emoji" aria-hidden="true">📐</span><span class="repo-arrow" aria-hidden="true">↗</span></a></h3>
+            <p>A Python/PyQt sketchpad for geometric drawing and transformations. Edit shapes on the canvas or through the command panel.</p>
+            <div class="project-links"><a href="https://github.com/CuSO4wyt/NJU_Computer_Graphic" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://github.com/CuSO4wyt/NJU_Computer_Graphic/blob/main/231220066_%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf" target="_blank" rel="noopener noreferrer">User guide <span aria-hidden="true">↗</span></a></div>
+            <p class="code-project-context">Python · PyQt5 · Computer Graphics course project</p>
+          </div>
+        </article>
+        <article class="code-project code-project-entry" id="ics-pa">
+          <h3><a href="https://github.com/CuSO4wyt/NJU_ICS_PA2024" target="_blank" rel="noopener noreferrer">IA-32 emulator &amp; kernel <span class="repo-arrow" aria-hidden="true">↗</span></a></h3>
+          <p>An IA-32 emulation project built on NJU’s NEMU framework. It connects instruction execution with paging/TLBs, interrupts, ELF loading, and kernel system calls.</p>
+          <p class="code-project-context">C · Computer Systems course project</p>
+        </article>
+        <article class="code-project code-project-entry" id="network-labs">
+          <h3><a href="https://github.com/CuSO4wyt/NJU_Network_2025_Spring" target="_blank" rel="noopener noreferrer">TCP/IP networking <span class="repo-arrow" aria-hidden="true">↗</span></a></h3>
+          <p>C networking labs covering TCP retransmission and congestion control, IP forwarding, and link-state routing, with Mininet topologies for experimenting with packet loss.</p>
+          <p class="code-project-context">C · Mininet · Computer Networks, 2025</p>
+        </article>
+        <article class="code-project code-project-entry" id="riscv-cpu">
+          <h3><a href="https://github.com/CuSO4wyt/NJU-DLCO-2024Spring-lab-logisim" target="_blank" rel="noopener noreferrer">32-bit RISC-V CPU <span class="repo-arrow" aria-hidden="true">↗</span></a></h3>
+          <p>A CPU core built in Logisim, alongside my digital logic and computer organization labs.</p>
+          <p class="code-project-context">2024 · Digital Logic &amp; Computer Organization</p>
+        </article>
+        <article class="code-project code-project-entry" id="tower-defence">
+          <h3><a href="https://github.com/CuSO4wyt/Tower_Defense_Game" target="_blank" rel="noopener noreferrer">Tower defence <span class="inline-emoji" aria-hidden="true">🎮</span><span class="repo-arrow" aria-hidden="true">↗</span></a></h3>
+          <p>A Qt/C++ game with melee and ranged towers, three difficulty levels, and maps you can save and load.</p>
+          <div class="game-footnote"><div class="game-characters" aria-hidden="true"><img src="assets/projects/sheep.png" width="100" height="100" loading="lazy" alt=""><img src="assets/projects/dog-tower.png" width="100" height="100" loading="lazy" alt=""></div><p>The sheep enemies and dog towers were drawn by a friend.</p></div>
+          <p class="code-project-context">2024 · Advanced Programming course project</p>
+        </article>
       </div>
     </section>
 
     <section id="background" class="section background" aria-labelledby="background-title">
-      <div class="section-heading"><h2 id="background-title">Background</h2><a class="text-link" href="assets/Yutong-Wu-CV.pdf" target="_blank" rel="noopener">Full CV <span aria-hidden="true">↗</span></a></div>
+      <div class="section-header"><h2 id="background-title">Background</h2><a class="text-link" href="assets/Yutong-Wu-CV.pdf" target="_blank" rel="noopener">Full CV <span aria-hidden="true">↗</span></a></div>
       <div class="background-sections">
         <section class="background-group" aria-labelledby="education-title"><h3 id="education-title" class="column-title">Education</h3>
           <div class="timeline-item education-item">
@@ -192,7 +197,10 @@
 
 
   </main>
-  <footer class="wrap site-footer"><div><a class="footer-name" href="#home">Yutong Wu <span lang="zh-CN">吴与同</span></a><p>Nanjing, China · Last updated November 2026</p></div><a class="text-link" href="mailto:yutong-wu@smail.nju.edu.cn">Say hello <span aria-hidden="true">↗</span></a></footer>
+  <footer class="page site-footer">
+    <p><a href="#home">Yutong Wu</a> · Nanjing, China · November 2026</p>
+    <a href="https://github.com/jonbarron/jonbarron.github.io">Template by Jon Barron</a>
+  </footer>
 
   <dialog class="image-viewer" id="image-viewer" aria-labelledby="viewer-title">
     <div class="viewer-header"><p id="viewer-title"></p><button id="viewer-close" type="button" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button></div>

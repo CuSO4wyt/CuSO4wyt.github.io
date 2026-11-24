@@ -1,10 +1,10 @@
 // Content and native disclosure controls work without JavaScript.
 const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 const sections = [...document.querySelectorAll('main > section[id]')];
-const siteHeader = document.querySelector('.site-header');
 let updateScheduled = false;
 const updateActiveSection = () => {
-  const marker = (siteHeader?.getBoundingClientRect().height || 0) + 32;
+  const scrollPadding = getComputedStyle(document.documentElement).scrollPaddingTop;
+  const marker = (Number.parseFloat(scrollPadding) || 0) + 1;
   let activeId = sections[0]?.id;
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= marker) activeId = section.id;
@@ -37,8 +37,8 @@ if (viewer && typeof viewer.showModal === 'function') {
   const readPaper = document.querySelector('#viewer-paper');
   const downloadPaper = document.querySelector('#viewer-download');
   const projectNames = { flowguard: 'FlowGuard', tracelens: 'TraceLens', proactiveflow: 'ProactiveFlow', 'ept-net': 'EPT-Net' };
-  const researchGallery = [...document.querySelectorAll('.project-teaser')].map(link => {
-    const project = link.closest('.project');
+  const researchGallery = [...document.querySelectorAll('.paper-media')].map(link => {
+    const project = link.closest('.paper');
     const paper = project.querySelector('.paper-download');
     return { link, src: link.href, alt: link.querySelector('img').alt,
       title: projectNames[project.id], caption: project.querySelector('h3').textContent,
